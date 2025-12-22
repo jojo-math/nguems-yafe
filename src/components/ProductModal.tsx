@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, MapPin } from 'lucide-react';
+import React from 'react';
 
 interface ProductModalProps {
   product: {
@@ -34,7 +35,7 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ type: "spring", duration: 0.5 }}
           className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e: React.MouseEvent) => e.stopPropagation()}
         >
           {/* Header */}
           <div className={`bg-gradient-to-br ${product.color} p-8 relative`}>
