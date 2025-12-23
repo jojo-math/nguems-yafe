@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden" style={{ background: 'linear-gradient(to bottom right, #01A101, #01A101, rgba(1, 161, 1, 0.7))' }}>
+    <section className="relative h-screen w-full overflow-hidden" style={{ background: 'linear-gradient(135deg, #004d00 0%, #006b00 25%, #01A101 50%, #2db82d 75%, #4dc94d 100%)' }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -12,8 +12,8 @@ const Hero = () => {
         }}></div>
       </div>
       
-      {/* Gradient overlay for text visibility */}
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))' }}></div>
+      {/* Gradient overlay for depth */}
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)' }}></div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-4">

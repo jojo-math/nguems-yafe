@@ -178,22 +178,22 @@ const ProofAndLocation = () => {
               className="space-y-6"
             >
               <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <h3 className="font-playfair text-2xl font-bold text-nguems-primary mb-4">
+                <h3 className="font-playfair text-2xl font-bold text-black mb-4">
                   Informations Pratiques
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-nguems-secondary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-nguems-primary">Emplacement</p>
-                      <p className="text-nguems-primary/70">Allée B - Stand 23</p>
+                      <p className="font-semibold text-black">Emplacement</p>
+                      <p className="text-black">Allée B - Stand 23</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Navigation className="w-5 h-5 text-nguems-secondary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-nguems-primary">Accès</p>
-                      <p className="text-nguems-primary/70">Entrée principale, suivez les panneaux dorés</p>
+                      <p className="font-semibold text-black">Accès</p>
+                      <p className="text-black">Entrée principale, suivez les guides</p>
                     </div>
                   </div>
                 </div>
@@ -203,9 +203,8 @@ const ProofAndLocation = () => {
                 <p className="font-semibold text-lg mb-2" style={{ color: '#01A101' }}>
                   Offres Exclusives Salon Yafe
                 </p>
-                <ul className="space-y-2" style={{ color: '#01A101' }}>
+                <ul className="space-y-2 text-black">
                   <li>✓ Réductions jusqu'à -15%</li>
-                  <li>✓ Échantillons gratuits</li>
                   <li>✓ Diagnostic peau GRATUIT</li>
                   <li>✓ Conseils d'experts</li>
                 </ul>
