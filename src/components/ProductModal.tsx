@@ -9,9 +9,11 @@ interface ProductModalProps {
     category: string;
     price: string;
     priceYafe: string;
+    promo?: string;
     icon: any;
     benefits: string[];
     description: string;
+    image: string;
     color: string;
   };
   onClose: () => void;
@@ -43,26 +45,37 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
               onClick={onClose}
               className="absolute top-4 right-4 bg-white/80 hover:bg-white rounded-full p-2 transition-colors"
             >
-              <X className="w-6 h-6 text-nguems-dark" />
+              <X className="w-6 h-6 text-nguems-primary" />
             </button>
             <div className="flex items-center justify-center mb-4">
-              <Icon className="w-20 h-20 text-nguems-brown/40" />
+              <img 
+                src={product.image} 
+                alt={product.name}
+                className="w-32 h-32 object-contain"
+              />
             </div>
-            <h2 className="font-playfair text-3xl font-bold text-nguems-dark text-center">
+            <h2 className="font-playfair text-3xl font-bold text-nguems-primary text-center">
               {product.name}
             </h2>
-            <p className="text-nguems-brown text-center mt-2">{product.category}</p>
+            <p className="text-nguems-primary/70 text-center mt-2">{product.category}</p>
           </div>
 
           {/* Content */}
           <div className="p-8">
-            <p className="text-nguems-brown mb-6 text-lg leading-relaxed">
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
               {product.description}
             </p>
 
+            {/* Promotion Badge */}
+            {product.promo && (
+              <div className="mb-6 bg-nguems-secondary/20 px-4 py-3 rounded-xl">
+                <p className="text-nguems-primary font-bold text-lg">🎁 {product.promo}</p>
+              </div>
+            )}
+
             {/* Benefits */}
             <div className="mb-6">
-              <h3 className="font-playfair text-xl font-bold text-nguems-dark mb-4">
+              <h3 className="font-playfair text-xl font-bold text-nguems-primary mb-4">
                 Bienfaits
               </h3>
               <div className="space-y-3">
@@ -74,28 +87,28 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-nguems-gold flex-shrink-0 mt-0.5" />
-                    <span className="text-nguems-dark">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-nguems-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-nguems-primary">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
             </div>
 
             {/* Price */}
-            <div className="bg-nguems-cream rounded-xl p-6 mb-6">
+            <div className="bg-nguems-secondary/10 rounded-xl p-6 mb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-nguems-brown line-through text-sm mb-1">
+                  <p className="text-gray-500 line-through text-sm mb-1">
                     Prix normal : {product.price}
                   </p>
-                  <p className="text-nguems-dark text-3xl font-bold">
+                  <p className="text-nguems-primary text-3xl font-bold">
                     {product.priceYafe}
                   </p>
-                  <p className="text-nguems-gold font-semibold text-sm mt-1">
+                  <p className="text-nguems-secondary font-semibold text-sm mt-1">
                     Offre spéciale Yafe 🎁
                   </p>
                 </div>
-                <div className="bg-nguems-gold text-nguems-dark px-4 py-2 rounded-full font-bold text-xl">
+                <div className="bg-nguems-secondary text-nguems-primary px-4 py-2 rounded-full font-bold text-xl">
                   -15%
                 </div>
               </div>
@@ -103,7 +116,7 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
 
             {/* CTA */}
             <button
-              className="w-full bg-nguems-dark hover:bg-nguems-brown text-nguems-cream py-4 rounded-xl font-semibold text-lg transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-yellow-500 hover:bg-black hover:text-white text-nguems-tertiary py-4 rounded-xl font-semibold text-lg transition-colors flex items-center justify-center gap-2"
               onClick={() => {
                 onClose();
                 document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' });
@@ -113,9 +126,6 @@ const ProductModal = ({ product, onClose }: ProductModalProps) => {
               Je veux tester au stand
             </button>
 
-            <p className="text-center text-nguems-brown text-sm mt-4">
-              Échantillon gratuit à votre disposition 💝
-            </p>
           </div>
         </motion.div>
       </motion.div>

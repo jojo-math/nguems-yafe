@@ -9,10 +9,13 @@ export default {
       },
       colors: {
         nguems: {
-          gold: '#D4AF37',
-          cream: '#F5F1E8',
-          dark: '#1A1A1A',
-          brown: '#8B6F47',
+          primary: '#01A101',
+          secondary: '#FBCE4D',
+          tertiary: '#FFFFFF',
+          gold: '#FBCE4D',
+          cream: '#FFFFFF',
+          dark: '#01A101',
+          brown: '#01A101',
         },
       },
       animation: {

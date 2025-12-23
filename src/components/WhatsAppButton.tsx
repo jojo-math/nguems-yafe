@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton = () => {
-  const phoneNumber = '237600000000'; // Remplacer par le vrai numéro
-  const message = encodeURIComponent('Bonjour NGUEM\'S ! J\'ai une question concernant vos produits.');
+  const phoneNumber = '237659980315'; // Remplacer par le vrai numéro
+  const message = encodeURIComponent('Bonjour NGUEM\'S COSMETICS ! J\'ai une question concernant vos produits.');
 
   return (
     <motion.a

@@ -83,7 +83,7 @@ const Diagnostic = () => {
   const recommendation = getRecommendation();
 
   return (
-    <section id="diagnostic" className="py-20 px-4 bg-gradient-to-br from-nguems-dark to-nguems-brown">
+    <section id="diagnostic" className="py-20 px-4" style={{ background: 'linear-gradient(to bottom right, #01A101, rgba(1, 161, 1, 0.8))' }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,12 @@ const Diagnostic = () => {
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-nguems-cream mb-4">
             Votre Diagnostic Beauté
           </h2>
-          <p className="text-nguems-gold text-lg md:text-xl">
+          <div className="inline-block bg-nguems-secondary/20 px-6 py-2 rounded-full mb-4">
+            <p className="text-yellow-500 text-5xl font-bold">
+              100% GRATUIT
+            </p>
+          </div>
+          <p className="text-nguems-secondary text-lg md:text-xl">
             2 questions pour découvrir les produits faits pour vous
           </p>
         </motion.div>
@@ -112,16 +117,16 @@ const Diagnostic = () => {
               {/* Progress Bar */}
               <div className="mb-8">
                 <div className="flex justify-between mb-2">
-                  <span className="text-nguems-brown font-semibold">
+                  <span className="text-nguems-primary font-semibold">
                     Question {currentStep + 1} sur {questions.length}
                   </span>
-                  <span className="text-nguems-gold font-semibold">
+                  <span className="text-nguems-secondary font-semibold">
                     {Math.round(((currentStep + 1) / questions.length) * 100)}%
                   </span>
                 </div>
-                <div className="w-full bg-nguems-cream rounded-full h-2">
+                <div className="w-full bg-gray-200 rounded-full h-2">
                   <motion.div
-                    className="bg-nguems-gold h-2 rounded-full"
+                    className="bg-nguems-secondary h-2 rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}
                     transition={{ duration: 0.3 }}
@@ -136,7 +141,7 @@ const Diagnostic = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
               >
-                <h3 className="font-playfair text-2xl md:text-3xl font-bold text-nguems-dark mb-8 text-center">
+                <h3 className="font-playfair text-2xl md:text-3xl font-bold text-nguems-primary mb-8 text-center">
                   {questions[currentStep].question}
                 </h3>
 
@@ -145,18 +150,18 @@ const Diagnostic = () => {
                     <motion.button
                       key={option.value}
                       onClick={() => handleAnswer(option.value)}
-                      className="bg-nguems-cream hover:bg-nguems-gold/20 border-2 border-transparent hover:border-nguems-gold rounded-xl p-6 transition-all text-left group"
+                      className="bg-gray-100 hover:bg-yellow-400 border-2 border-transparent hover:border-nguems-secondary rounded-xl p-6 transition-all text-left group"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <div className="flex items-center gap-4">
                         <span className="text-4xl">{option.emoji}</span>
                         <div className="flex-1">
-                          <span className="text-nguems-dark font-semibold text-lg block">
+                          <span className="text-nguems-primary font-semibold text-lg block">
                             {option.label}
                           </span>
                         </div>
-                        <ChevronRight className="w-5 h-5 text-nguems-brown group-hover:text-nguems-gold transition-colors" />
+                        <ChevronRight className="w-5 h-5 text-nguems-primary/50 group-hover:text-nguems-secondary transition-colors" />
                       </div>
                     </motion.button>
                   ))}
@@ -170,26 +175,26 @@ const Diagnostic = () => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <Sparkles className="w-16 h-16 text-nguems-gold mx-auto mb-6" />
-              <h3 className="font-playfair text-3xl font-bold text-nguems-dark mb-4">
+              <Sparkles className="w-16 h-16 text-nguems-secondary mx-auto mb-6" />
+              <h3 className="font-playfair text-3xl font-bold text-nguems-primary mb-4">
                 Votre Recommandation Personnalisée
               </h3>
               
-              <div className="bg-nguems-cream rounded-2xl p-8 mb-6">
-                <p className="text-nguems-gold font-semibold text-xl mb-2">
+              <div className="bg-nguems-secondary/10 rounded-2xl p-8 mb-6">
+                <p className="text-nguems-secondary font-semibold text-xl mb-2">
                   Nous vous recommandons
                 </p>
-                <p className="font-playfair text-2xl font-bold text-nguems-dark mb-4">
+                <p className="font-playfair text-2xl font-bold text-nguems-primary mb-4">
                   {recommendation.product}
                 </p>
-                <p className="text-nguems-brown text-lg mb-6">
+                <p className="text-nguems-primary/70 text-lg mb-6">
                   {recommendation.description}
                 </p>
                 
                 <div className="bg-white rounded-xl p-4">
-                  <p className="text-nguems-dark font-semibold mb-2">Votre routine :</p>
+                  <p className="text-nguems-primary font-semibold mb-2">Votre routine :</p>
                   {recommendation.routine.map((step, index) => (
-                    <p key={index} className="text-nguems-brown">
+                    <p key={index} className="text-nguems-primary/70">
                       ✓ {step}
                     </p>
                   ))}
@@ -201,13 +206,13 @@ const Diagnostic = () => {
                   onClick={() => {
                     document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="w-full bg-nguems-dark hover:bg-nguems-brown text-nguems-cream py-4 rounded-xl font-semibold text-lg transition-colors"
+                  className="w-full bg-yellow-500 hover:bg-black hover:text-white text-nguems-tertiary py-4 rounded-xl font-semibold text-lg transition-colors"
                 >
                   Trouver notre stand
                 </button>
                 <button
                   onClick={resetDiagnostic}
-                  className="w-full bg-nguems-cream hover:bg-nguems-gold/20 text-nguems-dark py-3 rounded-xl font-semibold transition-colors"
+                  className="w-full bg-gray-100 hover:bg-yellow-400 text-nguems-primary py-3 rounded-xl font-semibold transition-colors"
                 >
                   Refaire le diagnostic
                 </button>
@@ -220,9 +225,9 @@ const Diagnostic = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-nguems-cream/80 mt-8"
+          className="text-center text-nguems-tertiary/80 mt-8"
         >
-          💝 Venez confirmer votre diagnostic avec nos experts au stand
+          💝 Venez confirmer votre diagnostic GRATUIT avec nos experts au stand
         </motion.p>
       </div>
     </section>

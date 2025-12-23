@@ -41,7 +41,7 @@ const ProofAndLocation = () => {
   };
 
   return (
-    <section id="location" className="py-20 px-4 bg-nguems-cream">
+    <section id="location" className="py-20 px-4 bg-nguems-tertiary">
       <div className="max-w-6xl mx-auto">
         {/* Testimonials */}
         <motion.div
@@ -51,7 +51,7 @@ const ProofAndLocation = () => {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-nguems-dark text-center mb-12">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-nguems-primary text-center mb-12">
             Elles nous font confiance
           </h2>
 
@@ -69,30 +69,30 @@ const ProofAndLocation = () => {
               {/* Rating */}
               <div className="flex justify-center gap-1 mb-4">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-nguems-gold text-nguems-gold" />
+                  <Star key={i} className="w-5 h-5 fill-nguems-secondary text-nguems-secondary" />
                 ))}
               </div>
 
               {/* Testimonial */}
-              <p className="text-nguems-dark text-xl md:text-2xl font-light italic mb-6 leading-relaxed">
+              <p className="text-nguems-primary text-xl md:text-2xl font-light italic mb-6 leading-relaxed">
                 "{testimonials[currentTestimonial].text}"
               </p>
 
               {/* Author */}
-              <p className="font-semibold text-nguems-dark text-lg">
+              <p className="font-semibold text-nguems-primary text-lg">
                 {testimonials[currentTestimonial].name}
               </p>
-              <p className="text-nguems-brown">{testimonials[currentTestimonial].location}</p>
+              <p className="text-nguems-primary/70">{testimonials[currentTestimonial].location}</p>
             </motion.div>
 
             {/* Navigation */}
             <div className="flex justify-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
-                className="bg-nguems-cream hover:bg-nguems-gold/20 p-3 rounded-full transition-colors"
+                className="bg-nguems-secondary/20 hover:bg-nguems-secondary/40 p-3 rounded-full transition-colors"
                 aria-label="Témoignage précédent"
               >
-                <ChevronLeft className="w-6 h-6 text-nguems-dark" />
+                <ChevronLeft className="w-6 h-6 text-nguems-primary" />
               </button>
               <div className="flex items-center gap-2">
                 {testimonials.map((_, index) => (
@@ -102,7 +102,7 @@ const ProofAndLocation = () => {
                     className={`w-2 h-2 rounded-full transition-all ${
                       index === currentTestimonial
                         ? 'bg-nguems-gold w-8'
-                        : 'bg-nguems-brown/30'
+                        : 'bg-nguems-secondary/50'
                     }`}
                     aria-label={`Aller au témoignage ${index + 1}`}
                   />
@@ -110,10 +110,10 @@ const ProofAndLocation = () => {
               </div>
               <button
                 onClick={nextTestimonial}
-                className="bg-nguems-cream hover:bg-nguems-gold/20 p-3 rounded-full transition-colors"
+                className="bg-nguems-secondary/20 hover:bg-nguems-secondary/40 p-3 rounded-full transition-colors"
                 aria-label="Témoignage suivant"
               >
-                <ChevronRight className="w-6 h-6 text-nguems-dark" />
+                <ChevronRight className="w-6 h-6 text-nguems-primary" />
               </button>
             </div>
           </div>
@@ -126,10 +126,10 @@ const ProofAndLocation = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-nguems-dark text-center mb-4">
+          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-nguems-primary text-center mb-4">
             Trouvez-nous au Salon Yafe
           </h2>
-          <p className="text-nguems-brown text-lg text-center mb-12">
+          <p className="text-nguems-primary/70 text-lg text-center mb-12">
             Palais des Congrès de Yaoundé
           </p>
 
@@ -140,29 +140,30 @@ const ProofAndLocation = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-nguems-dark to-nguems-brown rounded-3xl p-8 text-center relative overflow-hidden"
+              className="rounded-3xl p-8 text-center relative overflow-hidden"
+              style={{ background: 'linear-gradient(to bottom right, #01A101, rgba(1, 161, 1, 0.5))' }}
             >
               <div className="relative z-10">
-                <Navigation className="w-16 h-16 text-nguems-gold mx-auto mb-4" />
-                <p className="text-nguems-cream text-2xl font-bold mb-2">VOUS ÊTES ICI</p>
+                <Navigation className="w-16 h-16 text-nguems-secondary mx-auto mb-4" />
+                <p className="text-nguems-tertiary text-2xl font-bold mb-2">VOUS ÊTES ICI</p>
                 <div className="my-8">
-                  <div className="h-1 bg-nguems-gold/30 w-full mb-4 relative">
+                  <div className="h-1 bg-black w-full mb-4 relative">
                     <motion.div
-                      className="absolute h-3 w-3 bg-nguems-gold rounded-full top-1/2 -translate-y-1/2"
+                      className="absolute h-3 w-3 bg-black rounded-full top-1/2 -translate-y-1/2"
                       animate={{ x: [0, 200, 0] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                     />
                   </div>
                 </div>
-                <MapPin className="w-16 h-16 text-nguems-gold mx-auto mb-4 animate-pulse-slow" />
-                <p className="text-nguems-gold text-2xl font-bold">STAND NGUEM'S</p>
-                <p className="text-nguems-cream/80 mt-2">Allée B - Stand 23</p>
+                <MapPin className="w-16 h-16 text-nguems-secondary mx-auto mb-4 animate-pulse-slow" />
+                <p className="text-nguems-secondary text-2xl font-bold">STAND NGUEM'S</p>
+                <p className="text-nguems-tertiary/80 mt-2">Allée B - Stand 23</p>
               </div>
               
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{
-                  backgroundImage: 'radial-gradient(circle, #D4AF37 2px, transparent 2px)',
+                  backgroundImage: 'radial-gradient(circle, #FBCE4D 2px, transparent 2px)',
                   backgroundSize: '30px 30px'
                 }}></div>
               </div>
@@ -177,40 +178,40 @@ const ProofAndLocation = () => {
               className="space-y-6"
             >
               <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <h3 className="font-playfair text-2xl font-bold text-nguems-dark mb-4">
+                <h3 className="font-playfair text-2xl font-bold text-nguems-primary mb-4">
                   Informations Pratiques
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-nguems-gold flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-nguems-secondary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-nguems-dark">Emplacement</p>
-                      <p className="text-nguems-brown">Allée B - Stand 23</p>
+                      <p className="font-semibold text-nguems-primary">Emplacement</p>
+                      <p className="text-nguems-primary/70">Allée B - Stand 23</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Navigation className="w-5 h-5 text-nguems-gold flex-shrink-0 mt-1" />
+                    <Navigation className="w-5 h-5 text-nguems-secondary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-nguems-dark">Accès</p>
-                      <p className="text-nguems-brown">Entrée principale, suivez les panneaux dorés</p>
+                      <p className="font-semibold text-nguems-primary">Accès</p>
+                      <p className="text-nguems-primary/70">Entrée principale, suivez les panneaux dorés</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-nguems-gold/20 rounded-2xl p-6 border-2 border-nguems-gold">
-                <p className="text-nguems-dark font-semibold text-lg mb-2">
-                  🎁 Offres Exclusives Salon Yafe
+              <div className="rounded-2xl p-6" style={{ background: 'linear-gradient(135deg, #FBCE4D, #f5c43d)', border: '2px solid #FBCE4D' }}>
+                <p className="font-semibold text-lg mb-2" style={{ color: '#01A101' }}>
+                  Offres Exclusives Salon Yafe
                 </p>
-                <ul className="space-y-2 text-nguems-dark">
+                <ul className="space-y-2" style={{ color: '#01A101' }}>
                   <li>✓ Réductions jusqu'à -15%</li>
                   <li>✓ Échantillons gratuits</li>
-                  <li>✓ Diagnostic peau personnalisé</li>
+                  <li>✓ Diagnostic peau GRATUIT</li>
                   <li>✓ Conseils d'experts</li>
                 </ul>
               </div>
 
-              <button className="w-full bg-nguems-dark hover:bg-nguems-brown text-nguems-cream py-4 rounded-xl font-semibold text-lg transition-colors flex items-center justify-center gap-2">
+              <button className="w-full py-4 rounded-xl font-semibold text-lg transition-colors flex items-center justify-center gap-2" style={{ backgroundColor: '#000000', color: '#FFFFFF' }}>
                 <MapPin className="w-5 h-5" />
                 Je viens vous voir !
               </button>

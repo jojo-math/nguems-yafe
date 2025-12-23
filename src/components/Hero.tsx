@@ -3,14 +3,17 @@ import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-nguems-dark via-nguems-brown to-nguems-dark">
+    <section className="relative h-screen w-full overflow-hidden" style={{ background: 'linear-gradient(to bottom right, #01A101, #01A101, rgba(1, 161, 1, 0.7))' }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #FBCE4D 1px, transparent 1px)',
           backgroundSize: '50px 50px'
         }}></div>
       </div>
+      
+      {/* Gradient overlay for text visibility */}
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))' }}></div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-4">
@@ -21,13 +24,10 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="font-playfair text-5xl md:text-7xl font-bold text-nguems-cream mb-6 leading-tight">
-              NGUEM'S
+              NGUEM'S COSMETICS
             </h1>
-            <p className="text-2xl md:text-4xl text-nguems-gold font-light mb-4">
-              L'Éclat du Cameroun
-            </p>
-            <p className="text-xl md:text-2xl text-nguems-cream/80 mb-12">
-              à votre portée
+            <p className="text-3xl md:text-4xl text-nguems-gold font-semibold mb-4">
+              Le secret de la beauté
             </p>
           </motion.div>
 
@@ -37,14 +37,15 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="space-y-6"
           >
-            <p className="text-nguems-cream/90 text-lg md:text-xl max-w-2xl mx-auto">
-              Découvrez une gamme de produits de beauté premium, 
+            <p className="text-nguems-cream/90 text-lg md:text-xl max-w-3xl mx-auto">
+              Découvrez une gamme de produits de beauté 100% made in Cameroon, 
               conçue pour révéler l'éclat naturel de votre peau.
             </p>
             
             <button 
               onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-nguems-gold hover:bg-nguems-gold/90 text-nguems-dark px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 inline-flex items-center gap-2"
+              className="px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 inline-flex items-center gap-2"
+              style={{ backgroundColor: '#000000', color: '#FFFFFF' }}
             >
               Découvrir nos produits
               <ChevronDown className="w-5 h-5" />
