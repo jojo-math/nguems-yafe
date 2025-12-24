@@ -6,10 +6,10 @@ import ProductModal from './ProductModal';
 const products = [
   {
     id: 1,
-    name: 'Crème Clarifiante NGUEM\'S',
+    name: 'Crème Visage Clarifiante NGUEM\'S',
     category: 'Éclat',
-    price: '12 000 FCFA',
-    priceYafe: '10 000 FCFA',
+    price: '4 000 FCFA',
+    priceYafe: '4000 FCFA + lait de poche offert',
     promo: 'Réduction sur le body painting',
     icon: Sparkles,
     benefits: [
@@ -19,15 +19,15 @@ const products = [
       'Résultats visibles rapidement'
     ],
     description: 'Notre crème clarifiante révèle l\'éclat naturel de votre peau tout en l\'unifiant.',
-    image: '/Creme-clarifiante.png',
+    image: '/Creme-clarifiante.jpeg',
     color: 'from-yellow-100 to-yellow-50'
   },
   {
     id: 2,
-    name: 'Lait Corporel Vivifiant NGUEM\'S',
-    category: 'Hydratation',
-    price: '10 000 FCFA',
-    priceYafe: '8 500 FCFA',
+    name: 'Lait Corporel Hydratant et Nourrissant NGUEM\'S',
+    category: 'Hydratation à l\'huile de coco et extrait de persil',
+    price: '7500 FCFA',
+    priceYafe: '7500 FCFA + lait de poche offert',
     promo: 'Réduction sur le body painting',
     icon: Droplet,
     benefits: [
@@ -36,16 +36,16 @@ const products = [
       'Texture non grasse',
       'Parfum délicat et raffiné'
     ],
-    description: 'Notre lait corporel vivifiant nourrit votre peau en profondeur tout en lui apportant un éclat incomparable.',
-    image: '/lait-corporel-vivifiant.png',
+    description: 'Notre lait corporel hydratant nourrit votre peau en profondeur tout en lui apportant un éclat incomparable.',
+    image: '/lait-corporel-hydratant.png',
     color: 'from-green-100 to-green-50'
   },
   {
     id: 3,
-    name: 'Pack NGUEM\'S',
+    name: 'Pack NGUEM\'S 500ml lait hydratant au sésame',
     category: 'Offre Spéciale',
     price: '25 000 FCFA',
-    priceYafe: '22 000 FCFA',
+    priceYafe: '15500 FCFA',
     promo: '1 Pack acheté = 1 Savon OFFERT',
     icon: Wind,
     benefits: [

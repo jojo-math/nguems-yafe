@@ -127,7 +127,7 @@ const ProofAndLocation = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-nguems-primary text-center mb-4">
-            Trouvez-nous au Salon Yafe
+            Trouvez-nous au Salon Yafé
           </h2>
           <p className="text-nguems-primary/70 text-lg text-center mb-12">
             Palais des Congrès de Yaoundé
@@ -157,7 +157,7 @@ const ProofAndLocation = () => {
                 </div>
                 <MapPin className="w-16 h-16 text-nguems-secondary mx-auto mb-4 animate-pulse-slow" />
                 <p className="text-nguems-secondary text-2xl font-bold">STAND NGUEM'S</p>
-                <p className="text-nguems-tertiary/80 mt-2">Allée B - Stand 23</p>
+                <p className="text-nguems-tertiary/80 mt-2">Allée B - Montez les escaliers, tout au fond de l'axe secondaire</p>
               </div>
               
               {/* Background pattern */}
@@ -186,7 +186,7 @@ const ProofAndLocation = () => {
                     <MapPin className="w-5 h-5 text-nguems-secondary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-black">Emplacement</p>
-                      <p className="text-black">Allée B - Stand 23</p>
+                      <p className="text-black">Allée B - Montez les escaliers, tout au fond de l'axe secondaire</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

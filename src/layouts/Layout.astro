@@ -1,4 +1,6 @@
 ---
+import { Analytics } from '@vercel/analytics/react';
+
 interface Props {
   title: string;
 }
@@ -21,6 +23,7 @@ const { title } = Astro.props;
   </head>
   <body class="font-inter bg-nguems-cream text-nguems-dark antialiased">
     <slot />
+    <Analytics client:load />
   </body>
 </html>
 
