@@ -57,6 +57,24 @@ const products = [
     description: 'Le pack complet NGUEM\'S pour une routine beauté complète et efficace. Un savon offert pour tout achat !',
     image: '/pack-nguems.jpeg',
     color: 'from-amber-100 to-amber-50'
+  },
+  {
+    id: 4,
+    name: 'Pack Nguem\'s 300ml lait hydratant au sésame',
+    category: 'Hydratation',
+    price: '15 000 FCFA',
+    priceYafe: '13500 FCFA',
+    promo: '1 Pack acheté = 1 Savon OFFERT',
+    icon: Droplet,
+    benefits: [
+      'Hydratation intense',
+      'Huile de sésame nourrissante',
+      'Format pratique 300ml',
+      'Peau douce et éclatante'
+    ],
+    description: 'Notre pack 300ml au lait hydratant enrichi à l\'huile de sésame pour une hydratation profonde et durable.',
+    image: '/pack-nguems-300ml.jpeg',
+    color: 'from-blue-100 to-blue-50'
   }
 ];
 
